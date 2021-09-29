@@ -9,25 +9,45 @@ package uspg.edu.model;
  *
  * @author Usuario
  */
-public class Entrenador extends Masajista {
+public class Entrenador extends IntegrantesSeleccion{
     
-    private int id;
-
+    public Integer idFederacion;
+    public Integer id;
+    public String nombre;
+    public String apellidos;
+    public Integer edad;
+    
+    
+   
     public Entrenador() {
+    super();
     }
 
-    public Entrenador(int id) {
-        this.id = id;
-    }
-    
-    
-    public void Dirigirpartido(){
-        System.out.println("");
-    }
-    
-    public void DirigirEntrenamiento(){
+    public Entrenador(Integer idFederacion, Integer id, 
+            String nombre, String apellidos, Integer edad) {
+        super(id, nombre, apellidos, edad);
+        this.idFederacion = idFederacion;
+        this.id= id;
+        this.nombre= nombre;
+        this.apellidos = apellidos;
+        this.edad= edad;
         
-        System.out.println("");
+        
     }
+      
+ 
+    public void Dirigirpartido(){}
+    
+    public void DirigirEntrenamiento(){}
+
+    public Integer getIdFederacion() {
+        return idFederacion;
+    }
+
+    public void setIdFederacion(Integer idFederacion) {
+        this.idFederacion = idFederacion;
+    }
+    
+    
     
 }
